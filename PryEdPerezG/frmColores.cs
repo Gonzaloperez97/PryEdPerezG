@@ -16,5 +16,30 @@ namespace PryEdPerezG
         {
             InitializeComponent();
         }
+        private void frmColores_Load(object sender, EventArgs e)
+        {
+            btnGrabar.Enabled = false;
+        }
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NomArchi = "Colores.csv";
+            x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
+
+            txtNombre.Text = "";
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                btnGrabar.Enabled = false;
+            }
+            else
+            {
+                btnGrabar.Enabled = true;
+            }
+        }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace PryEdPerezG
 {
-    public partial class Form1 : Form
+    public partial class frmAlumnos : Form
     {
-        public Form1()
+        public frmAlumnos()
         {
             InitializeComponent();
-        }
-
-        private void coloresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
